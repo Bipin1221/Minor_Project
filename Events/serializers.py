@@ -143,3 +143,11 @@ class TicketSerializer(serializers.ModelSerializer):
         ]
         read_only_fields = ['id', 'qr_code']
         write_only_fields = ['quantity']
+
+
+
+class KhaltiInitiateSerializer(serializers.Serializer):
+    event_id = serializers.IntegerField(required=True)
+    amount = serializers.DecimalField(max_digits=10, decimal_places=2, required=True)
+    class Meta:
+        fields = ['event_id','amount']

@@ -10,3 +10,4 @@ qrcode
 reportlab
 python-dotenv
 
+requests
